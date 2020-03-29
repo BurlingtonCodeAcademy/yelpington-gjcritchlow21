@@ -9,13 +9,13 @@
     grid-gap: 1rem;
     grid-template-areas:
         "header  map map"
-        "comment-bar  map  map"
+        "sideBar  map  map"
         "footer  footer    footer";
 }
 
 
 body{
-    background: linear-gradient(grey, lightgrey, grey);
+    background:   lightgrey;
     display: flex;
     justify-content: center;
 
@@ -59,12 +59,23 @@ body{
 
 
 .sideBar {
-    grid-area: comment-bar;
+    grid-area: sideBar;
     border-radius: 25px;
     background: linear-gradient(grey, blue);
     width: 20vw;
     height: 60vh;
+    overflow: scroll;
 }
+.linkContainer{
+    margin-top: 6px;
+}
+
+.links{
+    text-decoration : none;
+    color: lightgrey;
+    
+}
+
 
 /*--------map-bar----------*/
 
@@ -115,8 +126,8 @@ body{
 #footer-text {
     min-width: 250px;
     width: 27.5vw;
-    margin-top: 3px;
-    padding-top: 3px;
+    margin-top: 0;
+    padding-top: 0;
 }
 
 #footer-input {

@@ -9,7 +9,7 @@
     grid-gap: 1rem;
     grid-template-areas:
         "header  map map"
-        "comment-bar  map  map"
+        "sideBar  map  map"
         "footer  footer    footer";
 }
 
@@ -59,12 +59,23 @@ body{
 
 
 .sideBar {
-    grid-area: comment-bar;
+    grid-area: sideBar;
     border-radius: 25px;
     background: linear-gradient(grey, blue);
     width: 20vw;
     height: 60vh;
+    overflow: scroll;
 }
+.linkContainer{
+    margin-top: 6px;
+}
+
+.links{
+    text-decoration : none;
+    color: lightgrey;
+    
+}
+
 
 /*--------map-bar----------*/
 

@@ -6,7 +6,7 @@ function capitalize(word) {
     return firstLetter + restOfWord
 }
 
-function titleize() {
+function titleize(sentence) {
     let wordArray = sentence.toLowerCase().split(' ')
     let newArray = wordArray.map(capitalize)
     return newArray.join(' ')
@@ -16,7 +16,7 @@ let restList = document.getElementById('restList')
 
 /*----------Restaruant Map Location and Details--------*/
 async function restaurantDetails() {
-    fetch('/api/all.json')
+    fetch('./api/all.json')
         .then((res) => {
             return res.json()
         })
@@ -24,7 +24,7 @@ async function restaurantDetails() {
             idList.forEach((id) => {
                 let cleanUp = id.split('-').join(' ')
                 let name = titleize(cleanUp)
-                restList.innerHTML += `<p class='cleanText'><a class ='sideBar' href='/restaurant?${id}'>${name}</a></p>`
+                restList.innerHTML += `<div class='linkContainer'> <a class='links' href='/restaurant?${id}'>${name}</a></div>`
                 fetch(`./api/${id}.json`)
                     .then((res) => res.json())
                     .then((restInfo) => {
@@ -36,7 +36,7 @@ async function restaurantDetails() {
                             .then((jsonObj) => {
                                 let rests = jsonObj[0]
                                 let lat = rests.lat
-                                let lon = shops.lon
+                                let lon = rests.lon
                                 L.marker([lat, lon]).addTo(myMap).bindPopup(`<a href='/restaurant?${id}'>${name}</a>`)
                             })
                     })
