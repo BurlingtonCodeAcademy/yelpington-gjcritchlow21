@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css?family=Oxanium|Trade+Winds&display=swap');
+
+.grid-container {
+    display: grid;
+    width: 850px;
+    height: 700px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 2fr 8fr 2fr;
+    grid-gap: 1rem;
+    grid-template-areas:
+        "header  map map"
+        "sideBar  map  map"
+        "footer  footer    footer";
+}
+
+
+body{
+    background:   lightgrey;
+    display: flex;
+    justify-content: center;
+
+}
+
+
+/*---------Header---------*/
+
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    height: 10vw;
+    width: 80vw;
+    border-radius: 25px;
+    box-shadow: 0px 12px 15px -10px black;
+    background: blue;
+    background: linear-gradient(blue, grey);
+}
+
+#header {
+    width: auto;
+    height: auto;
+}
+
+#head-content{
+
+    text-align: center;
+    font-family:Trade Winds ;
+    font-size: 5rem;
+    color: white;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*---------side-bar---------*/
+
+
+.sideBar {
+    grid-area: sideBar;
+    border-radius: 25px;
+    background: linear-gradient(grey, blue);
+    width: 20vw;
+    height: 60vh;
+    
+}
+.linkContainer{
+    margin-top: 6px;
+}
+
+.links{
+    text-decoration : none;
+    color: white;
+    
+}
+
+
+/*--------map-bar----------*/
+
+.map {
+    grid-area: map;
+    border-radius: 25px;
+    background-color: blue;
+}
+
+#map {
+    width: auto;
+    height: auto;
+}
+
+/*-----------footer---------*/
+
+.footer {
+    grid-area:footer;
+    background: linear-gradient(blue, grey);
+    font-family: Oxanium;
+    border-radius: 25px;
+    color: white;
+    margin-top: 3px;
+}
+
+#footer-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 60vw;
+    min-width: 50px;
+    font-family: Oxanium;
+    color: white;
+}
+
+#footer-input-contact {
+    display: flex;
+    justify-content: space-between;
+    width: 60vw;
+    min-width: 50px;
+    margin-left: 1vw;
+}
+
+#footer-info {
+    font-size: .75rem;
+    width: 27.5vw;
+    min-width: 250px;
+    margin-right: 1vw;
+}
+
+#footer-text {
+    min-width: 250px;
+    width: 27.5vw;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+#footer-input {
+    width: 27.5vw;
+    min-width: 250px;
+}
+
+.info-input {
+    background-color: rgb(236, 236, 236);
+}
+
+.info-input:focus {
+    background-color: white;
+}
+
+#name, #email {
+    width: 13vw;
+    min-width: 108px;
+    padding-right: 0;
+}
+
+#btn-image {
+    height: 25px
+}
+#name-email {
+    font-family: Oxanium, cursive;
+    display: flex;
+    justify-content: space-between;
+    width: 27.5vw;
+    min-width: 220px;
+    margin-left: 1vw;
+}
+
+#message-container {
+    margin-top: 10px;
+    margin-left: 1vw;
+    width: 27.5vw;
+}
+
+#message {
+    font-family: Oxanium;
+    width: calc(27.5vw - 6px);
+    min-width: 220px;
+    height: 100px;
+}
+
+#footer-icons {
+    width: 27.5vw;
+    min-width: 250px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#footer-icons1, #footer-icons2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 13.75vw;
+    min-width: 110px;
+    height: 135px;
+    justify-content: space-between;
+}
+
+.icon {
+    display: flex;
+}
+
+.logo-blip {
+    width: 30px;
+    height: 30px;
+}
+
+.icon-text {
+    font-size: .6rem;
+    margin-top: 6px;
+}
+
+
+.button-bar {
+    margin-bottom: 5vh;
+}
