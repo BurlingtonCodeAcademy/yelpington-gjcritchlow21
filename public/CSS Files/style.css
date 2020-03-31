@@ -64,7 +64,7 @@ body{
     background: linear-gradient(grey, blue);
     width: 20vw;
     height: 60vh;
-    overflow: scroll;
+    
 }
 .linkContainer{
     margin-top: 6px;
@@ -72,7 +72,7 @@ body{
 
 .links{
     text-decoration : none;
-    color: lightgrey;
+    color: white;
     
 }
 
@@ -97,6 +97,8 @@ body{
     background: linear-gradient(blue, grey);
     font-family: Oxanium;
     border-radius: 25px;
+    color: white;
+    margin-top: 3px;
 }
 
 #footer-content {
@@ -106,6 +108,7 @@ body{
     width: 60vw;
     min-width: 50px;
     font-family: Oxanium;
+    color: white;
 }
 
 #footer-input-contact {
